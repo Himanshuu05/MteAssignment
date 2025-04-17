@@ -1,0 +1,39 @@
+Explain the concept of a prefix sum array and its applications
+A prefix sum array (also called a cumulative sum array) is a derived array where each element at index i contains the sum of all elements from the start (index 0) up to index i of the original array.
+
+🔹 Construction of Prefix Sum Array
+Given an array arr[] of length n, the prefix sum array prefix[] is built as:
+prefix[0] = arr[0]
+prefix[i] = prefix[i-1] + arr[i]  for i = 1 to n-1
+
+Example:
+Let arr = [2, 4, 6, 8, 10]
+
+Then, the prefix sum array is:
+
+swift
+Copy
+Edit
+prefix[0] = 2
+prefix[1] = 2 + 4 = 6
+prefix[2] = 6 + 6 = 12
+prefix[3] = 12 + 8 = 20
+prefix[4] = 20 + 10 = 30
+
+prefix[] = [2, 6, 12, 20, 30]
+
+Applications of Prefix Sum Array
+Fast Range Sum Queries
+Used to answer multiple subarray sum queries in constant time after O(n) preprocessing.
+
+Checking Subarray Constraints
+Used in problems like “Find number of subarrays with given sum”, “Max sum subarray of size k”, etc.
+
+2D Prefix Sum
+Extended to matrices to compute sum of submatrices efficiently.
+
+Difference Array Techniques
+Optimizes range updates in arrays (e.g., add value to all elements in range [l, r]).
+
+Bit Manipulation / Binary Indexed Trees
+Conceptually used in data structures like Fenwick Tree for prefix sums and frequency management.
