@@ -1,0 +1,13 @@
+Explain the sliding window technique and its use in string problems
+
+The Sliding Window Technique is a way to efficiently move through a portion (or "window") of data (usually an array or string)
+without having to reprocess everything from scratch each time.
+Instead of nested loops (which are slow for large inputs), we maintain a "window" of size k or dynamic length and
+slide it over the input — usually using two pointers (left and right)
+
+ Benefits
+Efficient: Reduces unnecessary re-computation
+
+Optimized for large inputs
+
+Clean and intuitive logic once mastered
