@@ -1,0 +1,52 @@
+✅ What is a Priority Queue?
+A Priority Queue is an abstract data structure similar to a regular queue, but each element is associated with a priority.
+ Elements are served based on their priority, not just the order they arrive.
+
+A higher priority element is served before a lower priority one.
+
+If two elements have the same priority, they are served according to their insertion order (depending on implementation).
+
+✅ How Is It Implemented?
+Most commonly implemented using a heap (binary heap):
+
+Min-Heap → the smallest element is on top
+
+Max-Heap → the largest element is on top
+
+In Java, it’s implemented via:
+PriorityQueue<Integer> minHeap = new PriorityQueue<>(); // min-heap by default
+PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder()); // max-heap
+
+✅ Operations in a Priority Queue
+
+Operation	Description	Time Complexity
+insert(x)	Adds an element	O(log n)
+peek()	Returns element with highest priority	O(1)
+poll()	Removes and returns top element	O(log n)
+
+Applications in Algorithm Design
+Priority queues are widely used in greedy algorithms, graph algorithms, heap problems, and real-time scheduling:
+🔹 1. Dijkstra's Algorithm
+Use a min-heap to efficiently fetch the next closest node.
+
+Helps in finding the shortest path in weighted graphs.
+
+🔹 2. Prim's Algorithm
+Use a min-heap to build a Minimum Spanning Tree (MST).
+
+🔹 3. A* and Best-First Search
+Use a priority queue to explore nodes with the least estimated cost first.
+
+🔹 4. Top K Problems
+Example: Find top K frequent elements or K largest/smallest numbers.
+
+Use a min-heap of size K to keep track of top elements efficiently.
+
+🔹 5. Huffman Coding
+Build an optimal prefix code using a min-heap to combine least frequent characters.
+
+🔹 6. Job Scheduling & Load Balancing
+Priority queue helps assign resources to the highest priority job/task.
+
+🔹 7. Merging K Sorted Lists/Arrays
+Use a priority queue to efficiently track the smallest current element from K lists.
