@@ -1,0 +1,35 @@
+What is Dynamic Programming (DP)?
+Dynamic Programming is a method used in algorithm design to solve complex problems by breaking them down into simpler
+overlapping subproblems and solving each subproblem only once, storing the result for future use (memoization or tabulation).
+
+Core Concepts in DP:
+Optimal Substructure:
+The problem can be broken down into smaller subproblems that can be solved independently.
+
+Overlapping Subproblems:
+The same subproblems are solved multiple times (e.g., in recursion), and DP avoids that by storing results.
+
+Memoization (Top-down):
+Cache results of recursive calls.
+
+Tabulation (Bottom-up):
+Build up a table iteratively.
+
+✅ Use of DP in Maximum Subarray Problem (Kadane’s Algorithm)
+✅ DP Formulation (Kadane’s Insight):
+Let dp[i] be the maximum sum subarray ending at index i.
+
+java
+Copy
+Edit
+dp[i] = max(nums[i], nums[i] + dp[i - 1])
+Either start a new subarray at i, or
+
+Extend the previous subarray ending at i - 1
+
+We take the maximum of all dp[i] to get the result.
+ime and Space Complexity
+Time: O(n)
+
+Space: O(n) (can be reduced to O(1) using Kadane's optimization
+
